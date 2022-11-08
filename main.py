@@ -51,7 +51,7 @@ filename = st.sidebar.selectbox("Select Date",find_csv_filenames("data/"))
 df= pd.read_csv("data/"+filename)
 
 time_list = df['time'].to_list()
-time_value = st.sidebar.selectbox("Select Time",time_list)
+time_value = st.sidebar.selectbox("Select Time",sorted(time_list))
 go_to = st.sidebar.button("GoTo")
 
 
